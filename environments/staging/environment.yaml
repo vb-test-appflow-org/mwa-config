@@ -1,0 +1,29 @@
+#
+# Configuration for environment
+#
+version: 1.0
+app:
+  # build id to deploy. if 'version' is commented out, the application is not deployed
+  version: ""
+  
+  # number of instances
+  instances:
+    # min number of instances. can be 0 for scale to 0. default to 1.
+    min: 1
+    
+    # max number of instances. defaults to 1 if min == 0, otherwise defaults to min
+    max: 1
+    
+  resources:
+    # max cpu. memory limit is based on cpu value: 1:4 memory ratio, e.g. 1 cpu == 4 gb
+    cpu: 1
+
+  # List of environment variables that are set for the application
+  env:
+    - name: SOME_ENV_VAR_NAME
+      value: "some_env_var_value"
+
+  # List of variables that can be referenced in the server.xml
+  variables:
+    - name: some_liberty_variable_name
+      value: "some_liberty_variable_value"
