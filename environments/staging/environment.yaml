@@ -20,8 +20,12 @@ app:
 
   # List of environment variables that are set for the application
   env:
-    - name: SOME_ENV_VAR_NAME
-      value: "some_env_var_value"
+    - name: JVM_ARGS
+      value: "-DenvironmentType=prod"
+    - name: test_Value
+      value: "testData"
+    - name: MAX
+      value: "5"
 
   # List of variables that can be referenced in the server.xml
   variables:
